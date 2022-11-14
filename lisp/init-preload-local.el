@@ -5,7 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;General configuration
 ;;
-;; Make Org mode work with files .notes
+;; Make Org mode work with .notes, which is the default org files
 (add-to-list 'auto-mode-alist '("\\.notes\\'" . org-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -34,7 +34,7 @@
 ;;
 ;; 让 cnfonts 在 Emacs 启动时自动生效。
 (cnfonts-mode 1)
-;; 添加两个字号增大缩小的快捷键
+;; 添加两个字号增大缩小的快捷键，暂时没必要，字体大小基本固定
 ;; (define-key cnfonts-mode-map (kbd "C--") #'cnfonts-decrease-fontsize)
 ;; (define-key cnfonts-mode-map (kbd "C-=") #'cnfonts-increase-fontsize)
 
