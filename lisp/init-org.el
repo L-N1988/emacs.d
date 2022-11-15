@@ -123,8 +123,8 @@ typical word processor."
          "* %?")
         ("r" "routines" entry (file "~/org/Routines.org")
          "* NEXT %?")
-        ("j" "Journal" entry (file+datetree "~/org/Journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")
+        ("j" "Journal" entry (file "~/org/Journal.org")
+         "* %?\nEntered on %U\n")
         ))
 
 
