@@ -127,7 +127,6 @@ typical word processor."
          "* %?\nEntered on %U\n")
         ))
 
-
 
 ;;; Refiling
 
