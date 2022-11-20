@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: diff
+# key: diff
+# --
+\frac{d ${1:V}}{d ${2:x}}$0

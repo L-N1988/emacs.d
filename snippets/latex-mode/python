@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: python
+# key: py
+# --
+\begin{lstlisting}[language=python]
+$0
+\end{lstlisting}

@@ -60,6 +60,7 @@
 (yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
 ;; Use yas-minor-mode on a per-buffer basis
 (add-hook 'LaTeX-mode-hook #'yas-minor-mode)
+(setq yas-triggers-in-field t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;zotxt configuration
