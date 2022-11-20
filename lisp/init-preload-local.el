@@ -18,6 +18,7 @@
 ;;
 (add-hook 'LaTeX-mode-hook (lambda ()
                              (TeX-fold-mode 1)))
+(add-hook 'LaTeX-mode-hook #'outline-minor-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;pyim configuration
@@ -52,3 +53,20 @@
 (setq dabbrev-case-distinction nil)
 (setq dabbrev-case-fold-search t)
 (setq dabbrev-case-replace nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;yasnippets configuration
+;;
+(yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
+;; Use yas-minor-mode on a per-buffer basis
+(add-hook 'LaTeX-mode-hook #'yas-minor-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;zotxt configuration
+;;
+;; Activate org-zotxt-mode in org-mode buffers
+(add-hook 'org-mode-hook (lambda () (org-zotxt-mode 1)))
+;; Change citation format to be less cumbersome in files.
+;; You'll need to install mkbehr-short into your style manager first.
+(eval-after-load "zotxt"
+  '(setq zotxt-default-bibliography-style "mkbehr-short"))
