@@ -3,6 +3,6 @@
 # key: eq
 # --
 \begin{equation}
-\label{$1}
-$0
+\label{eq: $2}
+${1:`(shell-command-to-string "echo \\$\\$ > ~/tmp/math.tex;xterm -e vim ~/tmp/math.tex 1>/dev/null 2>&1;cat ~/tmp/math.tex 2>/dev/null|tr -d '$\n'|sed 's/[ \t]*$//'")`}
 .\end{equation}
