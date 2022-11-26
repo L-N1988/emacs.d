@@ -23,12 +23,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;pyim configuration
 ;;
-(pyim-basedict-enable)   ; 拼音词库，五笔用户 *不需要* 此行设置
+(pyim-basedict-enable)   ;拼音词库，五笔用户 *不需要* 此行设置
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 (setq-default pyim-punctuation-translate-p '(yes))    ;使用全角标点。
 (setq-default pyim-punctuation-translate-p '(no))     ;使用半角标点。
 (setq-default pyim-punctuation-translate-p '(auto))   ;中文使用全角标点，英文使用半角标点。
+(setq pyim-page-style 'one-line) ;调整 tooltip 选词框的显示样式
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;cnfonts configuration
