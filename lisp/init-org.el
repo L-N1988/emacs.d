@@ -111,20 +111,16 @@ typical word processor."
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
-      `(("t" "todo" entry (file "~/org/gtd.org")  ; "" => `org-default-notes-file'
-         "* TODO %?\n%U\n %i %a" :clock-resume t)
+      `(("i" "inbox" entry (file "~/org/inbox.org")
+         "* TODO %?\n  %U\n  %i%a" :clock-resume t)
         ("n" "note" entry (file+headline "~/org/Notes.org" "Notes")
-         "* %?\n%U\n %i %a" :clock-resume t)
-        ("i" "inbox" entry (file+datetree "~/org/inbox.org")
-         "* TODO %?\nEntered on %U\n  %i\n  %a")
+         "* %?\n  %U\n  %i%a")
         ("p" "projects" entry (file "~/org/Projects.org")
-         "* PROJECT %?\n%U\n")
-        ("m" "remind" entry (file "~/org/Remind.org")
-         "* %?")
-        ("r" "routines" entry (file "~/org/Routines.org")
-         "* NEXT %?")
-        ("j" "Journal" entry (file "~/org/Journal.org")
-         "* %?\nEntered on %U\n")
+         "* PROJECT %?\n  %U\n")
+        ("r" "remind" entry (file "~/org/Remind.org")
+         "* TODO %?")
+        ("d" "daily" entry (file "~/org/Daily.org")
+         "* PROJECT %?")
         ))
 
 

@@ -1,7 +1,5 @@
 ;; ... your code here ...
 
-(provide 'init-preload-local)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;General configuration
 ;;
@@ -58,7 +56,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;yasnippets configuration
 ;;
-(yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
+;; or M-x yas-reload-all if you've started YASnippet already.
+(yas-global-mode 1)
 ;; Use yas-minor-mode on a per-buffer basis
 (add-hook 'LaTeX-mode-hook #'yas-minor-mode)
 (setq yas-triggers-in-field t)
@@ -72,3 +71,26 @@
 ;; You'll need to install mkbehr-short into your style manager first.
 (eval-after-load "zotxt"
   '(setq zotxt-default-bibliography-style "mkbehr-short"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;Deft configuration
+;;
+(setq deft-directory "~/org/notes")
+(setq deft-extensions '("org"))
+(setq deft-default-extension "org")
+(setq deft-text-mode 'org-mode)
+(setq deft-use-filter-string-for-filename t)
+;; use note filenames to generate the displayed titles
+(setq deft-use-filename-as-title nil)
+;; enable searching for files in subdirectories
+(setq deft-recursive t)
+;; replace all slashes and spaces with '_'
+;; and will convert the file name to lowercase:
+(setq deft-file-naming-rules
+      '((noslash . "_")
+        (nospace . "_")))
+;; automatically generated titles in new org-mode files
+(setq deft-org-mode-title-prefix t)
+
+(provide 'init-preload-local)
+;;; init-preload-local.el ends here
