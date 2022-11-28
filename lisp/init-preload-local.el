@@ -92,5 +92,21 @@
 ;; automatically generated titles in new org-mode files
 (setq deft-org-mode-title-prefix t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;org-roam configuration
+;;
+(setq org-roam-directory "~/org/notes")
+(define-key global-map (kbd "C-c n l") 'org-roam-buffer-toggle)
+(define-key global-map (kbd "C-c n f") 'org-roam-node-find)
+(define-key global-map (kbd "C-c n g") 'org-roam-graph)
+(define-key global-map (kbd "C-c n i") 'org-roam-node-insert)
+(define-key global-map (kbd "C-c n c") 'org-roam-capture)
+;; Dailies
+(define-key global-map (kbd "C-c n j") 'org-roam-dailies-capture-today)
+;; If you're using a vertical completion framework, you might want a more informative completion interface
+(setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+;; Activate org-roam-db-autosync in org-mode buffers
+(add-hook 'org-mode-hook (lambda () (org-roam-db-autosync-mode 1)))
+
 (provide 'init-preload-local)
 ;;; init-preload-local.el ends here

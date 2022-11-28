@@ -58,3 +58,4 @@ site-lisp/package/
 /cnfonts
 /request
 custom.el
+org-roam.db
