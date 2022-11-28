@@ -18,7 +18,7 @@
    (vector "#1d1f21" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#c5c8c6"))
  '(beacon-color "#cc6666")
  '(compilation-message-face 'default)
- '(custom-enabled-themes '(monokai))
+ '(custom-enabled-themes '(sanityinc-solarized-light))
  '(fci-rule-color "#373b41")
  '(flycheck-color-mode-line-face-to-color 'mode-line-buffer-id)
  '(frame-background-mode 'dark)
