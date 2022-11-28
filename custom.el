@@ -35,7 +35,7 @@
      ("#3C3D37" . 100)))
  '(magit-diff-use-overlays nil)
  '(org-agenda-files
-   '("~/org/Projects.org" "~/org/Remind.org" "~/org/inbox.org" "~/org/Routines.org" "~/org/gtd.org"))
+   '("~/org/notes/productive.org" "~/org/notes/Digital_signal_process.org" "~/org/notes/Fourier_analysis.org" "~/org/notes/Matrix_analysis.org" "~/org/Daily.org" "~/org/Projects.org" "~/org/Remind.org" "~/org/inbox.org"))
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\[")))
