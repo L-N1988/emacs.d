@@ -14,13 +14,13 @@
 (defun webdav-sync-active ()
   "use curl and webdav to synchronize modified files continuouly"
   (interactive)
-  (async-shell-command "zsh ~/org/sync_active.sh")
+  (async-shell-command "zsh ~/org/notes/sync_active.sh")
   )
 
 (defun webdav-sync-all ()
   "use curl and webdav to synchronize all files at one time"
   (interactive)
-  (shell-command "zsh ~/org/sync_all.sh")
+  (shell-command "zsh ~/org/notes/sync_all.sh")
   )
 
 
