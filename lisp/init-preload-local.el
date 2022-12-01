@@ -6,7 +6,8 @@
 
 ;; Make Org mode work with .notes, which is the default org files
 (add-to-list 'auto-mode-alist '("\\.notes\\'" . org-mode))
-
+;; Set emacs font size
+;; (set-face-attribute 'default nil :height 280)
 
 
 ;;; DIY functions
@@ -24,7 +25,12 @@
   )
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; org-mode configuration
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+
+
 
 ;;; evil configuration
 
