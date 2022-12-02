@@ -73,7 +73,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(fixed-pitch ((t (:family "Ubuntu Mono"))))
+ '(fixed-pitch ((t (:height 280 :family "Ubuntu Mono"))))
  '(font-latex-sectioning-0-face ((t (:inherit font-latex-sectioning-1-face :foreground "red" :height 1.1))))
  '(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :foreground "orange red" :height 1.1))))
  '(font-latex-sectioning-2-face ((t (:inherit font-latex-sectioning-3-face :foreground "dark orange" :height 1.1))))

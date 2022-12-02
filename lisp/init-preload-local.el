@@ -29,6 +29,9 @@
 ;;; org-mode configuration
 (add-hook 'org-mode-hook 'visual-line-mode)
 (add-hook 'org-mode-hook 'variable-pitch-mode)
+(set-face-attribute 'org-table nil :inherit 'fixed-pitch)
+(set-face-attribute 'org-code nil :inherit 'fixed-pitch)
+(set-face-attribute 'org-block nil :inherit 'fixed-pitch)
 
 
 
