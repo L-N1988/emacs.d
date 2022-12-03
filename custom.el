@@ -35,7 +35,7 @@
      ("#3C3D37" . 100)))
  '(magit-diff-use-overlays nil)
  '(org-agenda-files
-   '("~/org/notes/productive.org" "~/org/notes/Digital_signal_process.org" "~/org/notes/Fourier_analysis.org" "~/org/notes/Matrix_analysis.org" "~/org/Daily.org" "~/org/Projects.org" "~/org/Remind.org" "~/org/inbox.org"))
+   '("~/org/Daily.org" "~/org/Projects.org" "~/org/Remind.org" "~/org/inbox.org"))
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\[")))
@@ -80,4 +80,6 @@
  '(font-latex-sectioning-3-face ((t (:inherit font-latex-sectioning-4-face :foreground "orange" :height 1.1))))
  '(font-latex-sectioning-4-face ((t (:inherit font-latex-sectioning-5-face :foreground "gold" :height 1.1))))
  '(font-latex-sectioning-5-face ((t (:inherit variable-pitch :foreground "yellow" :weight bold))))
+ '(org-block ((t (:extend t :foreground "#cb4b16" :height 280 :family "Ubuntu Mono"))))
+ '(org-table ((t (:extend t :foreground "#cb4b16" :height 280 :family "Ubuntu Mono"))))
  '(variable-pitch ((t (:height 320 :family "Tinos")))))

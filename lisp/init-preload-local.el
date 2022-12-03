@@ -26,18 +26,19 @@
 
 
 
-;;; org-mode configuration
-(add-hook 'org-mode-hook 'visual-line-mode)
-(add-hook 'org-mode-hook 'variable-pitch-mode)
-(set-face-attribute 'org-table nil :inherit 'fixed-pitch)
-(set-face-attribute 'org-code nil :inherit 'fixed-pitch)
-(set-face-attribute 'org-block nil :inherit 'fixed-pitch)
-
-
-
 ;;; evil configuration
 
 (evil-mode 1)
+
+
+
+;;; org-mode face configuration
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+;; (set-face-attribute 'org-table nil :inherit 'fixed-pitch)
+;; (set-face-attribute 'org-code nil :inherit 'fixed-pitch)
+;; (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
+
 
 
 
@@ -128,6 +129,24 @@
         (nospace . "_")))
 ;; automatically generated titles in new org-mode files
 (setq deft-org-mode-title-prefix t)
+(defun cm/deft-parse-title (file contents)
+  "Parse the given FILE and CONTENTS and determine the title.
+  If `deft-use-filename-as-title' is nil, the title is taken to
+  be the first non-empty line of the FILE.  Else the base name of the FILE is
+  used as title."
+  (let ((begin (string-match "^#\\+[tT][iI][tT][lL][eE]: .*$" contents)))
+    (if begin
+        (string-trim (substring contents begin (match-end 0)) "#\\+[tT][iI][tT][lL][eE]: *" "[\n\t ]+")
+      (deft-base-filename file))))
+
+(advice-add 'deft-parse-title :override #'cm/deft-parse-title)
+
+(setq deft-strip-summary-regexp
+      (concat "\\("
+              "[\n\t]" ;; blank
+              "\\|^#\\+[[:alpha:]_]+:.*$" ;; org-mode metadata
+              "\\|^:PROPERTIES:\n\\(.+\n\\)+:END:\n"
+              "\\)"))
 
 
 
