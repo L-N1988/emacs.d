@@ -123,6 +123,9 @@ typical word processor."
          "* TODO %?")
         ("d" "daily" entry (file "~/org/Daily.org")
          "* PROJECT %?")
+        ;; other capture templates
+        ("s" "Slipbox" entry  (file "~/org/notes/inbox.org")
+         "* %?\n")
         ))
 
 

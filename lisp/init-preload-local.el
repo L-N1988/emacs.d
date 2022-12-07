@@ -9,6 +9,38 @@
 ;; Set emacs font size
 ;; (set-face-attribute 'default nil :height 280)
 
+
+
+
+;;; citar configuration
+
+(use-package citar
+  :bind (("C-c b" . citar-insert-citation)
+         :map minibuffer-local-map
+         ("M-b" . citar-insert-preset))
+  :custom
+  (citar-bibliography '("~/org/notes/biblio.bib")))
+
+(use-package citar
+  :no-require
+  :custom
+  (org-cite-global-bibliography '("~/org/notes/biblio.bib"))
+  (org-cite-insert-processor 'citar)
+  (org-cite-follow-processor 'citar)
+  (org-cite-activate-processor 'citar)
+  (citar-bibliography org-cite-global-bibliography)
+  ;; optional: org-cite-insert is also bound to C-c C-x C-@
+  :bind
+  (:map org-mode-map :package org ("C-c b" . #'org-cite-insert)))
+
+(setq citar-at-point-function 'embark-act)
+
+(setq citar-templates
+      '((main . "${author editor:30}     ${date year issued:4}     ${title:48}")
+        (suffix . "          ${=key= id:15}    ${=type=:12}    ${tags keywords:*}")
+        (preview . "${author editor} (${year issued date}) ${title}, ${journal journaltitle publisher container-title collection-title}.\n")
+        (note . "Notes on ${author editor}, ${title}")))
+
 
 ;;; DIY functions
 
@@ -174,5 +206,6 @@
 (add-hook 'org-mode-hook (lambda ()
                            (org-superstar-mode 1)))
 
-          (provide 'init-preload-local)
+
+(provide 'init-preload-local)
 ;;; init-preload-local.el ends here
